@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 nordic_countries = ["Finland", "Sweden", "Iceland", "Denmark", "Norway"]
 
 def main():
-    data = load_data('projekt3/corona_data.json')
+    data = load_data('projekt3/covid_data.json')
     
     dictionary = create_structure(data)
 
