@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
 
 nordic_countries = ["Finland", "Sweden", "Iceland", "Denmark", "Norway"]
 
@@ -53,10 +54,10 @@ def nordic_countries_plot(data, measure):
         else:
             plt.plot(measure, data=country_map[country], label=country)
         
-    ax.xaxis.set_tick_params(rotation=30, labelsize=10)
+    ax.xaxis.set_tick_params(rotation=90, labelsize=8)
     plt.ylabel("New " + measure)
     plt.title("New " + measure + " / day in Nordic countries")
-    plt.legend()
+    plt.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1, loc='upper left', ncol=1, title='Countries')
     plt.show()
 
 
@@ -82,7 +83,12 @@ def nordic_countries_bar(data, measure):
     for key in nordic_countries:
         height.append(total_measure_map[key])
 
-    plt.bar(y_pos, height, color=['blue', 'orange', 'green', 'red', 'purple'])
+    fig, ax = plt.subplots()
+    ax = plt.axes(facecolor='#E6E6E6')
+    ax.set_axisbelow(True)
+    plt.grid(color='w', linestyle='solid')
+    plt.bar(y_pos, height, color=[(0.2, 0.4, 0.6, 0.6), (0.2, 0.4, 0.6, 0.7), (0.2, 0.4, 0.6, 0.8), (0.2, 0.4, 0.6, 0.9), (0.2, 0.4, 0.6, 1.0)])
+    
     plt.xticks(y_pos, nordic_countries)
 
     plt.title('Total number of ' + measure + ' in Nordic Countries')
