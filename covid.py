@@ -169,7 +169,6 @@ def scandinavian_countries_bar(data, measure): # bar graf med total antal av fal
     plt.show()    
 
 
-
 def data_per_population_table(data, namnare): # visualizering av antal dödsfall och fall i relation med population samt relation mellan fall och dödsfall. 
    
     our_map = {}
@@ -209,7 +208,7 @@ def data_per_population_table(data, namnare): # visualizering av antal dödsfall
     
     plt.show()             
             
-        
+            
 def finnish_bar(data, title): # visualizering av antal fall stadvis samt åldergruppsvis i Finland
 
     cities = list(data.keys())
