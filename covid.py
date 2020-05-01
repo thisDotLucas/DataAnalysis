@@ -324,7 +324,7 @@ def isEmpty(file): # returnerar true ifall filen är tom.
 
 
 
-def isLatestDate(file): # returnerar true ifall sparade file inte är up-to-date.
+def isLatestDate(file): # returnerar true ifall sparade file är up-to-date.
 
     with open(file, 'r') as f:
         data = json.load(f)
