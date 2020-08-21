@@ -13,7 +13,7 @@ scandinavian_countries = ["Sweden", "Denmark", "Norway"] # lista med skandinavis
 
 def main(): 
     
-    # laddar ner data från olikalor för vidare analys
+    # laddar ner data från olika källor för vidare analys
     world_data = load_data("covid_world_data.json", "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/", True)
     finland_city_data = load_data("covid_finland_city_data.json", None, False)
     finland_age_data = load_data("covid_finland_age_data.json", None, False)
